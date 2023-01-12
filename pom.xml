@@ -70,6 +70,20 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.14</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.yugabyte</groupId>
+            <artifactId>ysql</artifactId>
+            <version>42.2.7-yb-2</version>
+        </dependency>
+
 
 
     </dependencies>
@@ -86,6 +100,14 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
